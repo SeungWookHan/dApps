@@ -46,6 +46,21 @@ const malaganet: AppConfig = {
   },
   gasPrice: 0.025,
 };
+const osmo_test: AppConfig = {
+  chainId: "osmo-test-4",
+  chainName: "Osmosis Testnet",
+  addressPrefix: "osmo",
+  rpcUrl: "https://osmosis-testnet-rpc.allthatnode.com:26657/",
+  httpUrl: "https://osmosis-testnet-rpc.allthatnode.com:26657/",
+  faucetUrl: "https://lcd-test.osmosis.zone",
+  feeToken: "uosmo",
+  stakingToken: "osmo",
+  coinMap: {
+    uosmo: { denom: "OSM0", fractionalDigits: 6 },
+    osmo: { denom: "LUNA", fractionalDigits: 6 },
+  },
+  gasPrice: 0.0002,
+};
 
 const pebblenet: AppConfig = {
   chainId: "pebblenet-1",
@@ -63,5 +78,5 @@ const pebblenet: AppConfig = {
   gasPrice: 0.025,
 };
 
-const configs: NetworkConfigs = { local, uninet, malaganet, pebblenet };
+const configs: NetworkConfigs = { local, uninet, malaganet, pebblenet, osmo_test };
 export const config = getAppConfig(configs);
