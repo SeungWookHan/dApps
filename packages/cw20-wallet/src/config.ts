@@ -31,6 +31,22 @@ const uninet: AppConfig = {
   gasPrice: 0.025,
 };
 
+const malaganet: AppConfig = {
+  chainId: "malaga-420",
+  chainName: "Malaga",
+  addressPrefix: "wasm",
+  rpcUrl: "https://rpc.malaga-420.cosmwasm.com",
+  httpUrl: "https://api.malaga-420.cosmwasm.com",
+  faucetUrl: "https://faucet.malaga-420.cosmwasm.com",
+  feeToken: "ucosm",
+  stakingToken: "uatom",
+  coinMap: {
+    ucosm: { denom: "COSM", fractionalDigits: 6 },
+    uatom: { denom: "ATOM", fractionalDigits: 6 },
+  },
+  gasPrice: 0.025,
+};
+
 const pebblenet: AppConfig = {
   chainId: "pebblenet-1",
   chainName: "Pebblenet",
@@ -47,5 +63,5 @@ const pebblenet: AppConfig = {
   gasPrice: 0.025,
 };
 
-const configs: NetworkConfigs = { local, uninet, pebblenet };
+const configs: NetworkConfigs = { local, uninet, malaganet, pebblenet };
 export const config = getAppConfig(configs);

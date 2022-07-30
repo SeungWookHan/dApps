@@ -12,6 +12,7 @@
   "scripts": {
     "start:base": "craco start",
     "start:local": "REACT_APP_NETWORK=local yarn start:base",
+    "start:malaga": "REACT_APP_NETWORK=malaganet yarn start:base",
     "start:uninet": "REACT_APP_NETWORK=uninet yarn start:base",
     "start": "yarn start:uninet",
     "build": "REACT_APP_NETWORK=uninet craco build",
